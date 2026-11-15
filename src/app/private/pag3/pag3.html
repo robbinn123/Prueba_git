@@ -1,0 +1,90 @@
+<div class="container my-4">
+  <div class="row align-items-center">
+
+    <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
+      <div class="card p-4 shadow-sm border">
+        <h3 class="mb-4 text-primary">Formulario de Registro</h3>
+
+        <form [formGroup]="myForm">
+
+          <div class="mb-3">
+            <label for="nombres" class="form-label fw-semibold">Nombres (*):</label>
+            <input 
+              type="text" 
+              id="nombres" 
+              class="form-control" 
+              formControlName="nombres" 
+              placeholder="Ingrese sus nombres">
+          </div>
+
+          <div class="mb-3">
+            <label for="apellido_paterno" class="form-label fw-semibold">Apellido Paterno (*):</label>
+            <input 
+              type="text" 
+              id="apellido_paterno" 
+              class="form-control" 
+              formControlName="apellido_paterno" 
+              placeholder="Ingrese apellido paterno">
+          </div>
+
+          <div class="mb-3">
+            <label for="apellido_materno" class="form-label fw-semibold">Apellido Materno:</label>
+            <input 
+              type="text" 
+              id="apellido_materno" 
+              class="form-control" 
+              formControlName="apellido_materno" 
+              placeholder="Ingrese apellido materno">
+          </div>
+
+          <div class="mb-3">
+            <label for="documento_identidad" class="form-label fw-semibold">Documento de Identidad (*):</label>
+            <input 
+              type="text" 
+              id="documento_identidad" 
+              class="form-control" 
+              formControlName="documento_identidad" 
+              placeholder="DNI o C.E.">
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label fw-semibold">Correo (*):</label>
+            <input 
+              type="email" 
+              id="correo" 
+              class="form-control" 
+              formControlName="correo" 
+              placeholder="ejemplo@correo.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="comentarios" class="form-label fw-semibold">Comentarios:</label>
+            <textarea 
+              id="comentarios" 
+              class="form-control" 
+              formControlName="comentarios" 
+              rows="3" 
+              placeholder="Escriba sus comentarios..."></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primary px-4 py-2" (click)="enviar()">
+            Enviar
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="col-lg-5 col-md-12 text-center">
+      <div class="p-3 bg-white rounded shadow-sm border">
+        <img 
+          src="https://cdn.somoskudasai.com/2021/06/lkfrxayy2x-843x1024.jpg" 
+          alt="Registro y Soporte Web" 
+          class="img-fluid rounded"
+          style="max-height: 420px; object-fit: cover;"
+        > 
+      </div>
+    </div>
+
+  </div>
+</div>
